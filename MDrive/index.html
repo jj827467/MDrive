@@ -18,6 +18,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+        
         tailwind.config = {
             theme: {
                 extend: {
@@ -356,7 +357,27 @@
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-2xl md:text-3xl font-black text-foreground">聯絡我們</h2>
                 <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
-                    <div class="card p-6 shadow-sm">
+                    <!-- 聯絡信息卡片 -->
+                    <div class="card p-6 shadow-sm relative overflow-hidden">
+                        <!-- 微信二維碼浮動圖片 - 可點擊放大 -->
+                        <div class="absolute top-15 right-20 z-10">
+                            <img id="wechatQr" src="./wechat.jpg" alt="微信聯絡二維碼" 
+                                class="h-24 w-auto rounded-lg border-2 border-white shadow-md cursor-pointer hover:opacity-90 transition-opacity"
+                                title="點擊放大二維碼">
+                            <!-- 小三角形指示標 -->
+                          
+                        </div>
+                        
+                        <!-- 放大後的模態框 (默認隱藏) -->
+                        <div id="qrModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
+                            <div class="relative bg-white p-4 rounded-lg max-w-md">
+                                <button id="closeModal" class="absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-600">
+                                    ✕
+                                </button>
+                                <img src="./wechat.jpg" alt="放大版微信二維碼" class="w-full h-auto rounded">
+                                <p class="text-center mt-2 text-gray-700">掃描二維碼添加微信</p>
+                            </div>
+                        </div>
                         <div class="text-sm text-muted-foreground">電話</div>
                         <a href="tel:+85368017763" class="block text-2xl font-extrabold mt-1 text-card-foreground">
                             +853 6801 7763
@@ -378,6 +399,8 @@
                             </a>
                         </div>
                     </div>
+                    
+                    <!-- 關於我們卡片 -->
                     <div class="card p-6 shadow-sm">
                         <div class="font-bold text-card-foreground">關於我們</div>
                         <p class="mt-2 text-sm text-muted-foreground">
@@ -385,8 +408,8 @@
                         </p>
                         <ul class="mt-4 text-sm text-muted-foreground space-y-1">
                             <li>• 服務範圍：澳門半島、氹仔、路氹、路環</li>
-                            <li>• 付款方式：現金/轉數快/其他（請自行填寫）</li>
-                            <li>• 服務時間：全年無休（請自行填寫實際時段）</li>
+                            <li>• 付款方式：現金/Mpay/中銀/其他</li>
+                            <li>• 服務時間：7:30pm-5:00am</li>
                         </ul>
                     </div>
                 </div>
@@ -431,6 +454,28 @@
     </div>
 
     <script>
+            // 圖片點擊放大功能
+        const qrImg = document.getElementById('wechatQr');
+        const qrModal = document.getElementById('qrModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        qrImg.addEventListener('click', () => {
+            qrModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 防止背景滾動
+        });
+        
+        closeModal.addEventListener('click', () => {
+            qrModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // 點擊模態框外部也關閉
+        qrModal.addEventListener('click', (e) => {
+            if(e.target === qrModal) {
+                qrModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
         // Toast notification function
         function showToast(message, type = 'success') {
             const toast = document.createElement('div');
