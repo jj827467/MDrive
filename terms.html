@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>服務條款 | M代駕 | 澳門代駕服務</title>
+    <meta name="description" content="M代駕服務條款 - 澳門實得代駕服務有限公司條例，保障代駕服務提供者與消費者之權利義務關係">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.5s ease-in-out",
+                        "slide-up": "slideUp 0.3s ease-out",
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" },
+                        },
+                        slideUp: {
+                            "0%": { transform: "translateY(10px)", opacity: "0" },
+                            "100%": { transform: "translateY(0)", opacity: "1" },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 24.6 95% 53.1%; /* 橙色系 */
+            --primary-foreground: 0 0% 100%;
+            --secondary: 210 40% 96%;
+            --secondary-foreground: 222.2 84% 4.9%;
+            --muted: 210 40% 96%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96%;
+            --accent-foreground: 222.2 84% 4.9%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 221.2 83.2% 53.3%;
+            --radius: 0.5rem;
+        }
+        
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: calc(var(--radius) - 2px);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+        
+        .btn-primary:hover {
+            background-color: hsl(var(--primary) / 0.9);
+        }
+        
+        .btn-outline {
+            border: 1px solid hsl(var(--border));
+            background-color: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: hsl(var(--accent));
+        }
+        
+        .btn-sm {
+            height: 2.25rem;
+            padding: 0 0.75rem;
+            font-size: 0.875rem;
+        }
+        
+        .btn-lg {
+            height: 2.75rem;
+            padding: 0 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .card {
+            background-color: hsl(var(--card));
+            color: hsl(var(--card-foreground));
+            border-radius: var(--radius);
+            border: 1px solid hsl(var(--border));
+        }
+        
+        .input {
+            width: 100%;
+            border-radius: calc(var(--radius) - 2px);
+            border: 1px solid hsl(var(--input));
+            background-color: hsl(var(--background));
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+        }
+        
+        .input:focus {
+            outline: none;
+          
+        }
+        
+        .chapter-nav {
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .article-item {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .article-item:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            height: 1px;
+            width: 0.75rem;
+            background-color: hsl(var(--primary));
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            z-index: 40;
+        }
+        
+        .toast {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 1rem;
+            border-radius: var(--radius);
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            border: 1px solid hsl(var(--border));
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 50;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .toast.error {
+            border-color: hsl(var(--destructive));
+        }
+        
+        .dialog-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .dialog-content {
+            background-color: hsl(var(--background));
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            max-width: 32rem;
+            width: 100%;
+            margin: 1rem;
+            animation: slideUp 0.3s ease-out;
+        }
+        
+        .fixed-mobile-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background-color: hsl(var(--background));
+            border-top: 1px solid hsl(var(--border));
+            z-index: 40;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-foreground">
+    <!-- 手機版底部固定CTA -->
+    <div class="fixed-mobile-cta lg:hidden">
+        <div class="flex gap-3">
+            <a href="tel:+85368017763" class="btn btn-primary flex-1 h-14 text-lg font-medium flex items-center justify-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                立即致電
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-orange-500/10 backdrop-blur-sm border-b border-orange-200 sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-bold text-primary hover:text-primary/80 transition-colors">
+                        M代駕
+                    </a>
+                </div>
+
+                <!-- 桌面版導航選單 -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html#services" class="text-foreground hover:text-primary transition-colors font-medium">服務</a>
+                    <a href="index.html#steps" class="text-foreground hover:text-primary transition-colors font-medium">流程</a>
+                    <a href="index.html#safety" class="text-foreground hover:text-primary transition-colors font-medium">安全保障</a>
+                    <a href="index.html#faq" class="text-foreground hover:text-primary transition-colors font-medium">FAQ</a>
+                    <a href="index.html#contact" class="text-foreground hover:text-primary transition-colors font-medium">聯絡</a>
+                </nav>
+
+                <!-- 桌面版CTA -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="tel:+85368017763" class="btn btn-primary btn-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        立即致電
+                    </a>
+                </div>
+
+                <!-- 手機版選單按鈕 -->
+                <button class="lg:hidden" onclick="toggleMobileMenu()">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- 手機版導航選單 -->
+        <div id="mobile-menu" class="lg:hidden bg-background border-t border-border hidden">
+            <nav class="container mx-auto px-4 py-4 space-y-2">
+                <a href="index.html#services" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">服務</a>
+                <a href="index.html#steps" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">流程</a>
+                <a href="index.html#safety" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">安全保障</a>
+                <a href="index.html#faq" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">FAQ</a>
+                <a href="index.html#contact" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">聯絡</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- 左侧导航 -->
+            <div class="lg:w-1/4">
+                <div class="chapter-nav card p-6">
+                    <h2 class="text-xl font-bold mb-4">條例章節</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#chapter1" class="text-foreground hover:text-primary transition-colors">第一章：總則</a></li>
+                        <li><a href="#chapter2" class="text-foreground hover:text-primary transition-colors">第二章：服務提供者之資格與義務</a></li>
+                        <li><a href="#chapter3" class="text-foreground hover:text-primary transition-colors">第三章：消費者之權利與義務</a></li>
+                        <li><a href="#chapter4" class="text-foreground hover:text-primary transition-colors">第四章：服務流程、收費與支付</a></li>
+                        <li><a href="#chapter5" class="text-foreground hover:text-primary transition-colors">第五章：事故處理、保險與責任歸屬</a></li>
+                        <li><a href="#chapter6" class="text-foreground hover:text-primary transition-colors">第六章：個人資料保護</a></li>
+                        <li><a href="#chapter7" class="text-foreground hover:text-primary transition-colors">第七章：爭議處理</a></li>
+                        <li><a href="#chapter8" class="text-foreground hover:text-primary transition-colors">第八章：附則</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 右侧内容 -->
+            <div class="lg:w-3/4">
+                <div class="card p-6 md:p-8">
+                    <h1 class="text-3xl font-bold text-foreground mb-2">服務條款</h1>
+                    <p class="text-muted-foreground mb-8">澳門實得代駕服務有限公司條例 | 最近更新: 2024年1月</p>
+
+                    <div id="chapter1" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第一章：總則</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第一條（目的與依據）</h3>
+                            <p class="text-foreground">為規範澳門特別行政區內代駕服務提供者與消費者之間之權利義務關係，保障雙方合法權益，促進代駕服務之安全、品質與健康發展，依據澳門特別行政區《民法典》、《道路交通法》、《消費者權益保護法》及相關法令，制定本條例。</p>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第二條（適用範圍）</h3>
+                            <p class="text-foreground">本條例適用於消費者透過本公司之應用程式、官方網站、電話或任何其他指定管道預約之下單代駕服務（以下簡稱「本服務」）。消費者一經使用本服務，即視為已閱讀、瞭解並同意接受本條例之所有內容。</p>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第三條（名詞定義）</h3>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><span class="font-medium">本公司/平台：</span> 指提供代駕服務資訊及協調服務之營運單位。</li>
+                                <li><span class="font-medium">消費者/客戶：</span> 指透過本公司管道預約代駕服務，並享有代駕服務之自然人。</li>
+                                <li><span class="font-medium">代駕員：</span> 指經本公司初步審核及認證，並由本公司指派為消費者提供代駕服務之自然人。代駕員與本公司之合作關係，依雙方簽訂之協議為準。</li>
+                                <li><span class="font-medium">服務費用：</span> 指消費者使用本服務應支付予本公司之所有費用，包括基本里程費、計時費、附加費等。</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="chapter2" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第二章：服務提供者（代駕員）之資格與義務</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第四條（代駕員資格）</h3>
+                            <p class="text-foreground mb-3">代駕員須同時滿足以下條件，方可透過本公司平台提供服務：</p>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li>持有澳門特別行政區合法有效之駕駛執照，且准駕車型與客戶車輛相符。</li>
+                                <li>具備至少三年之實際駕駛經驗。</li>
+                                <li>過去三年內無任何重大交通肇事記錄及危險駕駛記錄（如酒駕、毒駕、超速等）。</li>
+                                <li>同意並通過本公司提供之基本服務流程、安全規範及應急處理培訓。</li>
+                                <li>須年滿二十一歲或以上。</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第五條（代駕員服務規範）</h3>
+                            <p class="text-foreground mb-3">代駕員在提供服務時應遵守以下規定：</p>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><span class="font-medium">身份確認：</span> 接單後應主動向消費者出示載有本公司名稱、代駕員編號及照片之電子或實體工作證。</li>
+                                <li><span class="font-medium">儀容整潔：</span> 著裝應整潔得體。</li>
+                                <li><span class="font-medium">車輛檢查：</span> 服務開始前，須與消費者共同繞車檢查車輛外觀及內部狀況（如有無現有損傷、油量等），並透過應用程式或書面記錄確認，避免爭議。</li>
+                                <li><span class="font-medium">安全駕駛：</span> 嚴格遵守《道路交通法》及所有交通規則，確保行車安全。應根據路況、天氣等因素採取安全車速。</li>
+                                <li><span class="font-medium">車輛操作：</span> 應愛護客戶車輛，熟悉不同車型的基本操作（如手刹、燈光、雨刷等）。未經消費者同意，不得操作車輛除駕駛必要以外之功能（如音響、空調溫度等）。</li>
+                                <li><span class="font-medium">保密義務：</span> 對服務過程中知悉的消費者個人隱私、行車資訊等負有保密責任，不得向任何第三方透露或非法使用。</li>
+                                <li><span class="font-medium">禁品要求：</span> 服務期間嚴禁吸煙、飲酒或服用任何影響駕駛能力之物品。</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="chapter3" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第三章：消費者之權利與義務</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第六條（消費者義務）</h3>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><span class="font-medium">資訊真實：</span> 應提供真實、準確的服務地址、車輛資訊及目的地。</li>
+                                <li><span class="font-medium">車輛條件：</span> 確保提供代駕之車輛為合法登記且適用於道路行駛之車輛，已購買有效之汽車民事責任強制保險（第三者保險）。</li>
+                                <li><span class="font-medium">配合檢查：</span> 應配合代駕員進行服務前之車輛狀況檢查並確認。</li>
+                                <li><span class="font-medium">安全乘車：</span> 所有乘客均需繫妥安全帶。</li>
+                                <li><span class="font-medium">清醒與行為：</span> 雖接受代駕服務，消費者仍應保持基本清醒能力，以確認行程及履行合作義務。不得要求代駕員違反交通法規或進行任何危險操作。如消費者行為對代駕員構成威脅或騷擾，代駕員有權拒絕提供或中止服務，並可報警處理。</li>
+                                <li><span class="font-medium">貴重物品：</span> 應自行保管好車內貴重物品，代駕員不負責保管。</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第七條（消費者權利）</h3>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><span class="font-medium">知情權：</span> 有權預先知悉收費標準、預計費用。</li>
+                                <li><span class="font-medium">選擇權：</span> 有權核驗代駕員身份，並可因代駕員未能出示有效證件或其他正當理由拒絕接受服務。</li>
+                                <li><span class="font-medium">安全權：</span> 有權要求代駕員遵守交通規則和安全駕駛。</li>
+                                <li><span class="font-medium">索賠權：</span> 因代駕員過失導致車輛損壞或發生交通事故，有權依法追究責任並提出賠償要求（需依據保險條款及法律規定處理）。</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="chapter4" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第四章：服務流程、收費與支付</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第八條（服務預約與確認）</h3>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li>消費者透過平台預約服務，平台發送訂單確認訊息視為要約成立。</li>
+                                <li>若因道路條件、天氣惡劣等不可抗力因素導致無法提供服務，本公司應及時通知消費者。</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第九條（收費標準）</h3>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li>收費應公開透明，明確標示基本費、里程費、計時費、夜間附加費等計算方式。</li>
+                                <li>最終費用應於服務結束後，透過應用程式或紙本單據清晰列明，並提供予消費者。</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十條（支付方式）</h3>
+                            <p class="text-foreground">消費者應按平台公示之支付方式（如現金、電子支付等）按時支付服務費用。</p>
+                        </div>
+                    </div>
+
+                    <div id="chapter5" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第五章：事故處理、保險與責任歸屬</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十一條（交通事故處理）</h3>
+                            <p class="text-foreground mb-3">如在代駕服務期間發生交通事故，代駕員應：</p>
+                            <ul class="list-disc pl-5 space-y-2">
+                                <li>立即停車，開啟危險警示燈，並於車後方放置警示牌。</li>
+                                <li>檢查人員傷亡情況，如有人員受傷，立即撥打999求助。</li>
+                                <li>通知警方（999）及本公司客服中心，並根據警方指示處理。</li>
+                                <li>保護現場，等候警方到來。同時安撫消費者情緒。</li>
+                            </ul>
+                            <p class="text-foreground mt-3">代駕員應配合警方及保險公司進行調查。</p>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十二條（保險與責任界定）</h3>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li><span class="font-medium">強制保險：</span> 根據澳門現行法律，車輛之汽車民事責任強制保險（第三者保險）是保障基礎。在代駕服務期間發生交通意外，導致第三者人身傷亡或財產損失，受害者可獲得該保險之保障。</li>
+                                <li><span class="font-medium">車輛損壞與代駕責任險：</span>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                                        <li>消費者車輛的損壞，以及超出強制保險限額的第三方損失，責任歸屬需根據交通事故責任認定書及《民法典》的相關規定確定。</li>
+                                        <li>如因代駕員的過失或違規操作導致事故，本公司應協助消費者向相關責任方（代駕員或本公司）追究賠償責任。</li>
+                                        <li>（強烈建議） 為保障消費者及代駕員權益，本公司應主動購買代駕責任保險，用於賠償因代駕員過失造成的客戶車輛損失及人身傷害等。是否投保及保障範圍應明確告知消費者。</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十三條（責任限制）</h3>
+                            <p class="text-foreground mb-3">對於因以下情況造成的任何損失或損害，本公司不承擔責任：</p>
+                            <ol class="list-decimal pl-5 space-y-2">
+                                <li>因消費者提供之車輛本身存在機件故障或安全隱患。</li>
+                                <li>因消費者隱瞞車輛資訊或錯誤指導。</li>
+                                <li>因不可抗力（如自然災害、戰爭等）或意外事件（如被其他車輛追撞等非代駕員主責事故）。</li>
+                                <li>因消費者個人財物遺失或損毀。</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div id="chapter6" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第六章：個人資料保護</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十四條（隱私保護）</h3>
+                            <p class="text-foreground">本公司及代駕員對消費者的姓名、電話、地址、行車路線等個人資料必須嚴格保密，僅用於提供本服務之目的，並應遵守澳門特別行政區《個人資料保護法》的規定。</p>
+                        </div>
+                    </div>
+
+                    <div id="chapter7" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第七章：爭議處理</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十五條（協商解決）</h3>
+                            <p class="text-foreground">因本服務發生任何爭議，雙方應首先本著誠信原則友好協商解決。</p>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十六條（救濟途徑）</h3>
+                            <p class="text-foreground">若協商未果，任何一方均可將爭議提交至澳門特別行政區消費者委員會進行調解，或依相關法律透過司法途徑解決。</p>
+                        </div>
+                    </div>
+
+                    <div id="chapter8" class="mb-12 scroll-mt-20">
+                        <h2 class="text-2xl font-bold text-primary mb-4">第八章：附則</h2>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十七條（條例修改）</h3>
+                            <p class="text-foreground">本公司有權根據法律法規變化及經營需要，依法修改本條例，修改後之條例將於本公司平台公示後生效。</p>
+                        </div>
+                        
+                        <div class="article-item mb-6">
+                            <h3 class="text-xl font-semibold mb-2">第十八條（生效日期）</h3>
+                            <p class="text-foreground">本條例自公佈之日起生效。</p>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-border pt-6 mt-8">
+                        <h3 class="text-lg font-semibold mb-2">參考資料</h3>
+                        <ul class="text-sm text-muted-foreground">
+                            <li><a href="https://www.exmoo.com/article/219902.html" class="text-primary hover:underline" target="_blank">https://www.exmoo.com/article/219902.html</a></li>
+                            <li><a href="https://macaubbs.com/portal.php?mod=view&aid=47492" class="text-primary hover:underline" target="_blank">https://macaubbs.com/portal.php?mod=view&aid=47492</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 返回顶部按钮 -->
+    <a href="#" class="back-to-top p-3 bg-primary text-primary-foreground rounded-full shadow-md">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-sm text-muted-foreground bg-muted mt-12">
+        <div class="container mx-auto px-4">
+            <div>© 2024 M代駕 | 依法守規・酒後不開車</div>
+            <div class="mt-2 space-x-2">
+                <a href="terms.html" class="underline decoration-dotted hover:text-foreground transition-colors">
+                    服務條款
+                </a>
+                <span>·</span>
+                <a href="#" class="underline decoration-dotted hover:text-foreground transition-colors">
+                    私隱政策
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 底部間距補償手機版固定CTA -->
+    <div class="h-20 md:h-0"></div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        // 返回顶部按钮显示/隐藏
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // 平滑滚动到锚点
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

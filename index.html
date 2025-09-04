@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="zh-HK" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    
+    <title>M代駕 | 澳門代駕服務 - 你飲得醉，我送得穩</title>
+    <meta name="description" content="M代駕提供澳門全區專業代駕服務。透明分區收費，專業司機，快速接單，安全到家。酒後代駕、商務代駕、短途接送。立即致電 +853 6801 7763">
+    <meta name="keywords" content="澳門代駕, 酒後代駕, 代駕服務, 澳門司機, 安全代駕, M代駕, 指定駕駛">
+    <!-- Open Graph -->
+    <meta property="og:title" content="M代駕 | 澳門代駕服務 - 你飲得醉，我送得穩">
+    <meta property="og:description" content="M代駕提供澳門全區專業代駕服務。透明分區收費，專業司機，快速接單，安全到家。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mdrive.mo">
+    <meta property="og:image" content="https://mdrive.mo/og-image.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))",
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))",
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))",
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))",
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))",
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))",
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))",
+                        },
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                    animation: {
+                        "fade-in": "fadeIn 0.5s ease-in-out",
+                        "slide-up": "slideUp 0.3s ease-out",
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            "0%": { opacity: "0" },
+                            "100%": { opacity: "1" },
+                        },
+                        slideUp: {
+                            "0%": { transform: "translateY(10px)", opacity: "0" },
+                            "100%": { transform: "translateY(0)", opacity: "1" },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    
+</head>
+
+<body class="bg-background text-foreground">
+    <!-- 手機版底部固定CTA -->
+    <div class="fixed-mobile-cta lg:hidden">
+        <div class="flex gap-3">
+            <a href="tel:+85368017763" class="btn btn-primary flex-1 h-14 text-lg font-medium flex items-center justify-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                立即致電
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-primary/5 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <button onclick="toggleCompanyDialog()" class="text-3xl font-bold text-primary hover:text-primary/80 transition-colors">
+                        M代駕
+                    </button>
+                </div>
+
+                <!-- 桌面版導航選單 -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <a href="#services" class="text-foreground hover:text-primary transition-colors font-medium">服務</a>
+                    <a href="#steps" class="text-foreground hover:text-primary transition-colors font-medium">流程</a>
+                    <a href="#safety" class="text-foreground hover:text-primary transition-colors font-medium">安全保障</a>
+                    <a href="#faq" class="text-foreground hover:text-primary transition-colors font-medium">FAQ</a>
+                    <a href="#contact" class="text-foreground hover:text-primary transition-colors font-medium">聯絡</a>
+                </nav>
+
+                <!-- 桌面版CTA -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="tel:+85368017763" class="btn btn-primary btn-lg flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        立即致電
+                    </a>
+                </div>
+
+                <!-- 手機版選單按鈕 -->
+                <button class="lg:hidden" onclick="toggleMobileMenu()">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- 手機版導航選單 -->
+        <div id="mobile-menu" class="lg:hidden bg-background border-t border-border hidden">
+            <nav class="container mx-auto px-4 py-4 space-y-2">
+                <a href="#services" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">服務</a>
+                <a href="#steps" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">流程</a>
+                <a href="#safety" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">安全保障</a>
+                <a href="#faq" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">FAQ</a>
+                <a href="#contact" class="block py-2 text-foreground hover:text-primary transition-colors font-medium" onclick="toggleMobileMenu()">聯絡</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative">
+            <div class="max-w-6xl mx-auto px-4 py-10 md:py-20">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <!-- 左側內容 -->
+                    <div>
+                        <h1 class="text-3xl md:text-5xl font-black leading-tight text-foreground">
+                            你飲得醉，<span class="text-primary">我送得穩!</span>
+                        </h1>
+                        <p class="mt-4 text-lg text-muted-foreground">
+                            透明分區收費・專業司機・快速接單・安全到家。
+                        </p>
+                        
+                        <!-- 預約表單 -->
+                        <form onsubmit="handleHeroCallback(event)" class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div class="sm:col-span-2">
+                                <input
+                                    type="tel"
+                                    id="hero-phone"
+                                    placeholder="輸入您的澳門電話（8位數字）"
+                                    maxlength="8"
+                                    class="input h-12"
+                                    required
+                                />
+                            </div>
+                            <button type="submit" class="btn btn-primary h-12 font-semibold" id="hero-submit">
+                                回撥預約
+                            </button>
+                        </form>
+                        
+                        <!-- 聯絡方式 -->
+                        <div class="mt-3 flex flex-wrap items-center gap-3 text-sm">
+                            <a href="tel:+85368017763" class="btn btn-outline btn-sm">電話：+853 6801 7763</a>
+                            <a href="https://wa.me/85368017763?text=%E6%88%91%E8%A6%81%E9%A0%90%E7%B4%84M%E4%BB%A3%E9%A7%95%EF%BC%8C%E4%B8%8B%E5%88%97%E8%B3%87%E6%96%99%EF%BC%9A" class="btn btn-outline btn-sm">
+                                WhatsApp 即刻預約
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 右側價格卡 -->
+                    <div class="order-first md:order-last">
+                        <div class="card relative overflow-hidden p-6 shadow-lg">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+                            <div class="relative">
+                                <h3 class="text-xl font-bold text-card-foreground">分區收費（澳門幣）</h3>
+                                <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+                                    <div class="p-4 rounded-2xl bg-background border border-border">
+                                        <div class="text-muted-foreground">澳門區</div>
+                                        <div class="mt-1 text-2xl font-extrabold text-foreground">$99</div>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-background border border-border">
+                                        <div class="text-muted-foreground">氹仔區</div>
+                                        <div class="mt-1 text-2xl font-extrabold text-foreground">$128</div>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-background border border-border">
+                                        <div class="text-muted-foreground">路氹區</div>
+                                        <div class="mt-1 text-2xl font-extrabold text-foreground">$168</div>
+                                    </div>
+                                    <div class="p-4 rounded-2xl bg-background border border-border">
+                                        <div class="text-muted-foreground">路環區</div>
+                                        <div class="mt-1 text-2xl font-extrabold text-foreground">$188</div>
+                                    </div>
+                                </div>
+                                <p class="mt-3 text-xs text-muted-foreground">
+                                    * 晚上十二點後加收20$ (含 10分鐘等候)。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-12 md:py-20 bg-muted border-t border-border">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-black text-foreground">我們能做什麼</h2>
+                <div class="mt-6 grid md:grid-cols-4 gap-4">
+                    <div class="card p-5 shadow-sm">
+                        <div class="text-lg font-bold text-card-foreground">酒後代駕</div>
+                        <p class="mt-2 text-sm text-muted-foreground">飲後不開車，安全有人載。專業司機送您與愛車回家。</p>
+                    </div>
+                    <div class="card p-5 shadow-sm">
+                        <div class="text-lg font-bold text-card-foreground">短途/跨區</div>
+                        <p class="mt-2 text-sm text-muted-foreground">市內短途與跨區接送，透明附加費，先講清。</p>
+                    </div>
+                    <div class="card p-5 shadow-sm">
+                        <div class="text-lg font-bold text-card-foreground">商務代駕</div>
+                        <p class="mt-2 text-sm text-muted-foreground">會議/宴飲後專人值勤，體面省心。</p>
+                    </div>
+                    <div class="card p-5 shadow-sm">
+                        <div class="text-lg font-bold text-card-foreground">臨時私人司機</div>
+                        <p class="mt-2 text-sm text-muted-foreground">臨時外出或特殊需求，靈活派車。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section id="steps" class="py-12 md:py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-black text-foreground">3 步完成預約</h2>
+                <div class="mt-8 grid md:grid-cols-3 gap-6">
+                    <div class="card p-6 shadow-sm">
+                        <div class="mb-4 rounded-xl overflow-hidden">
+                            <img src="./step1-phone.jpg" alt="手機輸入電話號碼示意圖" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="text-sm font-semibold text-primary">Step 1</div>
+                        <div class="mt-1 text-xl font-bold text-card-foreground">留下電話</div>
+                        <p class="mt-2 text-sm text-muted-foreground">輸入8位數澳門電話，或直接電話/WhatsApp 聯絡我們。</p>
+                    </div>
+                    <div class="card p-6 shadow-sm">
+                        <div class="mb-4 rounded-xl overflow-hidden">
+                            <img src="./step2-response.jpg" alt="客服快速回應示意圖" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="text-sm font-semibold text-primary">Step 2</div>
+                        <div class="mt-1 text-xl font-bold text-card-foreground">10秒內回覆</div>
+                        <p class="mt-2 text-sm text-muted-foreground">客服確認上車地點、目的地與車型需求（示意文案，可調整）。</p>
+                    </div>
+                    <div class="card p-6 shadow-sm">
+                        <div class="mb-4 rounded-xl overflow-hidden">
+                            <img src="./step3-driver.jpg" alt="專業司機出發示意圖" class="w-full h-48 object-cover">
+                        </div>
+                        <div class="text-sm font-semibold text-primary">Step 3</div>
+                        <div class="mt-1 text-xl font-bold text-card-foreground">司機即刻出發</div>
+                        <p class="mt-2 text-sm text-muted-foreground">最近司機前往接載，安全將您與車輛一同送達。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section id="safety" class="py-12 md:py-20 bg-muted border-y border-border">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-black text-foreground">安全與保障</h2>
+                <div class="mt-6 grid md:grid-cols-3 gap-6 text-sm">
+                    <div class="card p-6 shadow-sm">
+                        <div class="font-bold text-card-foreground">專業司機</div>
+                        <p class="mt-2 text-muted-foreground">司機實名審核、定期培訓，遵守道路法規。</p>
+                    </div>
+                    <div class="card p-6 shadow-sm">
+                        <div class="font-bold text-card-foreground">保險/責任</div>
+                        <p class="mt-2 text-muted-foreground">行程責任劃分清晰，提供必要之保險保障。</p>
+                    </div>
+                    <div class="card p-6 shadow-sm">
+                        <div class="font-bold text-card-foreground">價格透明</div>
+                        <p class="mt-2 text-muted-foreground">基本價及附加費於下方公開列明，先講清，後出發。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-12 md:py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex flex-col md:flex-row gap-6 items-start">
+                    <div class="flex-1">
+                        <h2 class="text-2xl md:text-3xl font-black text-foreground">常見問題</h2>
+                        <div class="mt-6 divide-y divide-border border border-border rounded-2xl overflow-hidden">
+                            <div class="accordion-item">
+                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                    可以同時送人與車嗎？
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                    可以。司機駕駛您的車輛送達，您可同車或自行前往。我們建議您同車以確保安全。
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                    司機是否經過培訓？
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                    所有司機均經實名認證及專業培訓，持有效駕照並定期接受安全教育。
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                    支援哪些付款方式？
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                    支援現金、轉數快及其他電子支付方式，企業客戶可申請月結服務。
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <button class="accordion-trigger text-left font-semibold text-foreground hover:text-primary px-5 py-4 w-full flex justify-between items-center" onclick="toggleAccordion(this)">
+                                    惡劣天氣會影響服務嗎？
+                                    <span class="accordion-icon">+</span>
+                                </button>
+                                <div class="accordion-content px-5 pb-4 text-muted-foreground leading-relaxed" data-state="closed">
+                                    颱風或暴雨等極端天氣可能影響服務時間，我們會提前通知並儘量安排。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 md:py-20 bg-muted border-t border-border">
+            <div class="max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-black text-foreground">聯絡我們</h2>
+                <div class="mt-6 grid md:grid-cols-2 gap-6 items-start">
+                    <!-- 聯絡信息卡片 -->
+                    <div class="card p-6 shadow-sm relative overflow-hidden">
+                        <!-- 微信二維碼浮動圖片 - 可點擊放大 -->
+                        <div class="absolute top-4 right-4 z-10 md:top-4 md:right-4">
+                            <img id="wechatQr" src="./wechat.jpg" alt="微信聯絡二維碼" 
+                                class="h-24 w-auto rounded-lg border-2 border-white shadow-md cursor-pointer hover:opacity-90 transition-opacity"
+                                title="點擊放大二維碼">
+                        </div>
+                        
+                        <!-- 放大後的模態框 (默認隱藏) -->
+                        <div id="qrModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center hidden">
+                            <div class="relative bg-white p-4 rounded-lg max-w-md">
+                                <button id="closeModal" class="absolute -top-3 -right-3 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-red-600">
+                                    ✕
+                                </button>
+                                <img src="./wechat.jpg" alt="放大版微信二維碼" class="w-full h-auto rounded">
+                                <p class="text-center mt-2 text-gray-700">掃描二維碼添加微信</p>
+                            </div>
+                        </div>
+                        <div class="text-sm text-muted-foreground">電話</div>
+                        <a href="tel:+85368017763" class="block text-2xl font-extrabold mt-1 text-card-foreground">
+                            +853 6801 7763
+                        </a>
+                        <div class="mt-4 text-sm text-muted-foreground">Email</div>
+                        <a href="mailto:mmdrive168@gmail.com" class="block mt-1 text-card-foreground">
+                            mmdrive168@gmail.com
+                        </a>
+                        <div class="mt-6 flex gap-3">
+                            <a href="tel:+85368017763" class="btn btn-primary">立即來電</a>
+                            <a href="https://wa.me/85368017763?text=%E6%88%91%E8%A6%81%E9%A0%90%E7%B4%84M%E4%BB%A3%E9%A7%95%EF%BC%8C%E4%B8%8B%E5%88%97%E8%B3%87%E6%96%99%EF%BC%9A" class="btn btn-outline bg-green-500 text-white border-green-500 hover:bg-green-600">
+                                WhatsApp
+                            </a>
+                            <a href="https://www.instagram.com/mdrive_666/?igsh=MWF5OHdrZmR6M2NrcQ%3D%3D&utm_source=qr#" target="_blank" rel="noopener noreferrer" class="btn btn-outline bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white border-transparent hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                Instagram
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 關於我們卡片 -->
+                    <div class="card p-6 shadow-sm">
+                        <div class="font-bold text-card-foreground">關於我們</div>
+                        <p class="mt-2 text-sm text-muted-foreground">
+                            「M代駕」以客戶安全為核心，致力提供高性價比的酒後代駕服務。感謝支持本地平台，讓澳門更安全。
+                        </p>
+                        <ul class="mt-4 text-sm text-muted-foreground space-y-1">
+                            <li>• 服務範圍：澳門半島、氹仔、路氹、路環</li>
+                            <li>• 付款方式：現金/Mpay/中銀/其他</li>
+                            <li>• 服務時間：7:30pm-5:00am</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center text-sm text-muted-foreground">
+        <div class="max-w-6xl mx-auto px-4">
+            <div>© 2024 M代駕 | 依法守規・酒後不開車</div>
+            <div class="mt-2 space-x-2">
+                <a href="./terms.html" class="underline decoration-dotted hover:text-foreground transition-colors">
+                    服務條款
+                </a>
+                <span>·</span>
+                <a href="./privacy_policy.html" class="underline decoration-dotted hover:text-foreground transition-colors">
+                    私隱政策
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 底部間距補償手機版固定CTA -->
+    <div class="h-20 md:h-0"></div>
+
+    <!-- Company Dialog -->
+    <div id="company-dialog" class="dialog-overlay hidden" onclick="closeCompanyDialog(event)">
+        <div class="dialog-content" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-2xl font-bold text-primary">關於我們</h3>
+                <button onclick="closeCompanyDialog()" class="text-muted-foreground hover:text-foreground">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <p class="text-base leading-relaxed text-muted-foreground">
+                「M代駕服務有限公司」為澳門市民提供高品質、高效率，方便輕捷的代駕服務。本公司提供電話、手機通訊軟體、官方帳號及網頁等形式的召喚代駕服務。支援「M代駕」將為澳門市民提供一個專屬的代駕平台。
+            </p>
+        </div>
+    </div>
+
+    <script>
+        let heroFormSubmitted = false; // 限制只可提交一次
+            // 圖片點擊放大功能
+        const qrImg = document.getElementById('wechatQr');
+        const qrModal = document.getElementById('qrModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        qrImg.addEventListener('click', () => {
+            qrModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // 防止背景滾動
+        });
+        
+        closeModal.addEventListener('click', () => {
+            qrModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+        
+        // 點擊模態框外部也關閉
+        qrModal.addEventListener('click', (e) => {
+            if(e.target === qrModal) {
+                qrModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        });
+        // Toast notification function
+        function showToast(message, type = 'success') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <div class="font-semibold">${type === 'error' ? '錯誤' : '成功'}</div>
+                <div class="text-sm">${message}</div>
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
+        }
+
+        // Phone validation
+        function validatePhone(phone) {
+            const cleanPhone = phone.replace(/\D/g, '');
+            return /^\d{8}$/.test(cleanPhone);
+        }
+
+        // Hero callback form handler
+       async function handleHeroCallback(event) {
+        event.preventDefault();
+
+        if (heroFormSubmitted) {
+            showToast('已提交，請勿重複預約。', 'error');
+            return;
+        }
+
+        const phoneInput = document.getElementById('hero-phone');
+        const submitBtn = document.getElementById('hero-submit');
+        const phone = phoneInput.value;
+        const cleanPhone = phone.replace(/\D/g, '');
+
+        if (!validatePhone(phone)) {
+            showToast('請輸入有效的 8 位數澳門電話。', 'error');
+            return;
+        }
+
+        submitBtn.textContent = '處理中...';
+        submitBtn.disabled = true;
+
+        try {
+            // 发送到Telegram机器人
+            const botToken = '8468925634:AAHyVcR6nWBKmqpcUVLKp0XvOcjuSu6q3uQ';
+            const chatId = '-1002907678198';
+            const message = `新的代駕預約請求:\n電話: ${cleanPhone}\n時間: ${new Date().toLocaleString()}`;
+
+            const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            });
+
+            const result = await response.json();
+
+            if (result.ok) {
+                showToast(`您的預約已提交，我們會盡快聯系您 (${cleanPhone})`);
+                heroFormSubmitted = true; // 標記已提交
+            } else {
+                throw new Error('发送到Telegram失败');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            showToast('提交失敗，請直接通過WhatsApp聯系我們', 'error');
+            const whatsappText = encodeURIComponent(`我想預約 M代駕：\n電話：${cleanPhone}\n上車地點：\n目的地：\n時間：`);
+            window.open(`https://wa.me/85368017763?text=${whatsappText}`, '_blank');
+        } finally {
+            submitBtn.textContent = '回撥預約';
+            submitBtn.disabled = false;
+            phoneInput.value = '';
+        }
+    }
+
+    // 手机号验证函数
+    function validatePhone(phone) {
+        const cleanPhone = phone.replace(/\D/g, '');
+        return /^\d{8}$/.test(cleanPhone);
+    }
+
+    // Toast通知函数
+    function showToast(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+            <div class="font-semibold">${type === 'error' ? '錯誤' : '成功'}</div>
+            <div class="text-sm">${message}</div>
+        `;
+        
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+            toast.remove();
+        }, 3000);
+    }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        // Company dialog functions
+        function toggleCompanyDialog() {
+            const dialog = document.getElementById('company-dialog');
+            dialog.classList.remove('hidden');
+        }
+
+        function closeCompanyDialog(event) {
+            if (event && event.target !== event.currentTarget) return;
+            const dialog = document.getElementById('company-dialog');
+            dialog.classList.add('hidden');
+        }
+
+        // Accordion toggle
+        function toggleAccordion(trigger) {
+            const content = trigger.nextElementSibling;
+            const icon = trigger.querySelector('.accordion-icon');
+            const isOpen = content.getAttribute('data-state') === 'open';
+            
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(otherContent => {
+                if (otherContent !== content) {
+                    otherContent.setAttribute('data-state', 'closed');
+                    otherContent.previousElementSibling.querySelector('.accordion-icon').textContent = '+';
+                }
+            });
+            
+            // Toggle current accordion
+            if (isOpen) {
+                content.setAttribute('data-state', 'closed');
+                icon.textContent = '+';
+            } else {
+                content.setAttribute('data-state', 'open');
+                icon.textContent = '−';
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Format phone input
+            const phoneInput = document.getElementById('hero-phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length > 8) {
+                        value = value.substring(0, 8);
+                    }
+                    e.target.value = value;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
