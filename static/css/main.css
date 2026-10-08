@@ -1,5 +1,5 @@
 :root {
-            /* M代駕品牌色彩系統 - 基於 #FF6A00 橙色 */
+            /* 拓域科技色彩系統 - 基於 #FF6A00 橙色 */
             --background: 0 0% 100%;
             --foreground: 20 14% 4%;
 
@@ -80,6 +80,7 @@
         body {
             background-color: hsl(var(--background));
             color: hsl(var(--foreground));
+            padding-top: 5rem;
         }
 
         /* Toast styles */
@@ -255,3 +256,17 @@
         .hidden {
             display: none;
         }
+        /* AI 聊天視窗滾動條美化 */
+        #chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+        #chat-messages::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #chat-messages::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+
+
+        

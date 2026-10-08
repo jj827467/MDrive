@@ -1,0 +1,33 @@
+/* Shared layout and accessibility rules for every full page. */
+body {
+    padding-top: 5rem;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+section[id], [id^="chapter"] {
+    scroll-margin-top: 6rem;
+}
+
+:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 4px;
+}
+
+#ai-chat-window {
+    max-height: calc(100dvh - 8rem);
+}
+
+#chat-messages {
+    min-height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
